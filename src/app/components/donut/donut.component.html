@@ -1,0 +1,20 @@
+<h1>Donuts Here</h1>
+
+<p>The ID for your donuts is! {{id}}</p>
+
+
+
+@if (params$ | async; as params) {
+	<p>Donuts: {{params['id']}}</p>
+}
+
+@if(name) {
+	<p>Your donuts: {{name}}</p>
+}
+
+
+@if (queryParams$ | async; as queryParams) {
+	@if (queryParams['name']) {
+		<p>The ID for your donut is {{queryParams['name']}}</p>
+	}
+}
